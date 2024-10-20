@@ -1,0 +1,245 @@
+.main {
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loginMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.loginMessage a{
+    text-decoration: none;
+    font-size: medium;
+    border-radius: 8px;
+    color: white;
+    padding: 1rem;
+    background-color: #1e56a0;
+}
+
+.pageContent{
+    margin-top: 150px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.menuBar{
+    width: 100%;
+    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(242, 243, 250); */
+    background-color: white;
+
+    z-index: 100;
+
+}
+
+.menuBar header{
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(179, 179, 179, 0.733);
+}
+
+.menuBar header p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.headerButtons{
+    display: flex;
+    gap: 10px;
+}
+
+.menuBar button {
+    /* width: 10%; */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.5rem 0.5rem;
+    border: 0;
+    border-radius: 8px;
+    background-color: #1e56a0;
+    color: white;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.filters{
+    padding: 0.5rem;
+    display: flex;
+    list-style: none;
+    box-shadow: inset;
+    gap: 1.5rem;
+}
+
+.filterName{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color:rgb(255, 254, 254);
+    /* border: 0.5px solid rgb(206, 206, 206); */
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.filterName img{
+    width: 16px;
+    height: 16px;
+}
+
+.dropdownMenu {
+    /* display: none; */
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    position: absolute;
+    padding: 0.5rem;
+    border-radius: 4px;
+    background-color: rgb(255, 254, 254);
+    min-width: 60px;
+    z-index: 100;
+}
+
+
+.dropdownMenu p{
+    padding: 0.20rem;
+    cursor: pointer;
+}
+
+/* .filters li:hover .dropdownMenu{
+    display: block;
+} */
+
+.timeRangeForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-evenly;
+}
+
+.timeRangeForm p{
+    padding: 0.25rem;
+}
+
+.timeRangeForm button{
+    font-size: medium;
+    padding: 0.25rem 0.5rem;
+}
+
+.filterButtons{
+    display: flex;
+}
+
+.filterButtons button{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 0.25rem;
+    color: #0e28bb;
+    background-color: transparent;
+    text-decoration: underline;
+
+}
+
+.chartsContainer {
+    width: 100%;
+    height: 600px;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.chartName{
+    font-weight: 500;
+    font-size: 1.25rem;
+}
+
+.chart{
+    padding: 0.5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* height: 100%;
+    width: 50%; */
+}
+
+@media (max-width: 800px){
+    .chartsContainer {
+        flex-direction: column;
+    }
+    .chart{
+        height: 50%;
+        width: 100%;
+    }
+    .filters{
+        gap:0.5rem
+    }
+    .filterName{
+        font-size: small;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+    }
+    
+    .filterName img{
+        width: 12px;
+        height: 12px;
+    }
+
+}
+
+@media (max-height: 600px){
+    .chartsContainer {
+        flex-direction: column;
+    }
+    .chart{
+        height: 50%;
+        width: 100%;
+    }
+    .filters{
+        gap:0.5rem
+    }
+    .filterName{
+        font-size: small;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+    }
+}
+
+
+@media (max-width: 400px){
+    .pageContent{
+        margin-top: 180px;
+    }
+   
+    .filters{
+        gap:0.5rem
+    }
+    .filterName{
+        font-size: small;
+        padding: 0.25rem ;
+        border-radius: 0.5rem;
+    }
+}
