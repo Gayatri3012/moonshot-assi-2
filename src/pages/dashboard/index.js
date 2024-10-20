@@ -18,7 +18,6 @@ export default function DashBoard() {
 
     const router = useRouter();   
 
-    console.log(router.asPath)
 
     
     if(!isAuthenticated){

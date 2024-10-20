@@ -59,7 +59,6 @@ export default function LoginForm() {
                 const encodedGender = encodeURIComponent('');
                 const encodedStartDate = encodeURIComponent('');
                 const encodedEndDate = encodeURIComponent('');
-                console.log(encodedAge, encodedGender, encodedStartDate, encodedEndDate)
             
                 const dashboardUrl = `/dashboard?age=${encodedAge}&gender=${encodedGender}&startDate=${encodedStartDate}&endDate=${encodedEndDate}`;
                 const isParamsUrl = Cookies.get('paramsUrl')

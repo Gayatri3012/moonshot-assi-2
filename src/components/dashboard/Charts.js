@@ -152,7 +152,7 @@ export default function Charts({filterOption}) {
         </div>}
     
          {lineChartData && <div className={styles.chart}>
-            <p className={styles.chartName}>Time Trend of Feature "{selectedFeature}"</p>
+            <p className={styles.chartName}>Time Trend of Feature {selectedFeature}</p>
             <VictoryChart 
                 containerComponent={<VictoryZoomContainer zoomDimension='x'/>}
                 // animate={{

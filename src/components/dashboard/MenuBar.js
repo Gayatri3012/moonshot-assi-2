@@ -82,7 +82,6 @@ export default function MenuBar({
         const encodedGender = encodeURIComponent(selectedGender || '');
         const encodedStartDate = encodeURIComponent(selectedStartDate || '');
         const encodedEndDate = encodeURIComponent(selectedEndDate || '');
-        console.log(encodedAge, encodedGender, encodedStartDate, encodedEndDate)
             
         const shareUrl = `${window.location.origin}/dashboard?${encodedAge ? `age=${encodedAge}&`: 'age=&'}${encodedGender ? `gender=${encodedGender}&` : 'gender=&'}${ encodedStartDate ? `startDate=${encodedStartDate}&`: 'startDate=&'}${encodedEndDate ? `endDate=${encodedEndDate}`: 'endDate='}`;
         navigator.clipboard.writeText(shareUrl);
