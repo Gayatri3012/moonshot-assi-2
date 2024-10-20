@@ -5,7 +5,7 @@ import User from "@/models/user";
 
 export default async function handler(req, res) {
   console.log('in signup handler')
-  if(req.method === 'POST'){
+
     const data = req.body;
 
     const client = await MongoClient.connect(process.env.MONGO_CONNECTION_URL);
@@ -35,5 +35,5 @@ export default async function handler(req, res) {
     }
    
     client.close();
-  }
+  
 }

@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 
 
 export default async function handler(req, res) {
-  if(req.method === 'POST'){
+  
     const data = req.body;
     
     const client = await MongoClient.connect(process.env.MONGO_CONNECTION_URL);
@@ -28,5 +28,5 @@ export default async function handler(req, res) {
     }
    
     client.close();
-  }
+ 
 }
