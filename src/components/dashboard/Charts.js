@@ -30,7 +30,9 @@ export default function Charts({filterOption}) {
     useEffect(() => {
         const fetchData = async () => {
             setLineChartData(undefined)
-            const response = await fetch('/api/data');
+            const response = await fetch('/api/data', {
+                method: 'GET'
+            });
             const resData = await response.json(); 
 
             const formattedData = formatData(resData);

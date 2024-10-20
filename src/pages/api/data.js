@@ -2,11 +2,10 @@ import csvParser from "csv-parser";
 import fs from 'fs';
 
 export default async function handler(req, res) { 
-
-    if(req.meathod === 'GET'){
-        try{
+    if(req.method === 'GET'){
+    try{
             const data = [];
-            await fs.createReadStream('./src/util/data.csv')
+            await fs.createReadStream('src/util/data.csv')
             .pipe(csvParser())
             .on('data', (row) => data.push(row))
             .on('end', () => {
