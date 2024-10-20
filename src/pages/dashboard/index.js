@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import MenuBar from "@/components/dashboard/MenuBar";
 import Charts from "@/components/dashboard/Charts";
 import Cookies from "js-cookie";
+import Link from "next/link";
 
 export default function DashBoard() {
     const { isAuthenticated } = useContext(AuthContext);
@@ -91,7 +92,7 @@ export default function DashBoard() {
         {!isAuthenticated && <div className={styles.loginMessage}>
 
           <h3>You need to be logged in to view this dashboard.</h3>
-          <a href='/auth/login'>Login</a>
+          <Link href='/auth/login'>Login</Link>
         </div>}
         {isAuthenticated && <div className={styles.pageContent}>
             <MenuBar 
