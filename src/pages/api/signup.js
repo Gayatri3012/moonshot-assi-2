@@ -5,14 +5,13 @@ import User from "@/models/user";
 
 export default async function handler(req, res) {
   console.log('in signup handler')
-
+  if(req.method === 'POST'){
     const data = req.body;
 
     const client = await MongoClient.connect(process.env.MONGO_CONNECTION_URL);
     const db = client.db('data-visualization-dashboard');
 
     const users = db.collection('users');
-    console.log(users)
     try{
       
       const userExists = await users.findOne({email : data.email});
@@ -32,8 +31,10 @@ export default async function handler(req, res) {
     } catch(err){
       console.error(err);
 
+    }finally{
+      client.close();
     }
    
-    client.close();
-  
+   
+  }
 }

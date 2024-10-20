@@ -9,7 +9,6 @@ export default async function handler(req, res) {
         .pipe(csvParser())
         .on('data', (row) => data.push(row))
         .on('end', () => {
-            console.log(data)
             res.status(200).json(data);
         })
     }catch(err){

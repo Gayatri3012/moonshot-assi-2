@@ -3,12 +3,12 @@ import bcrypt from 'bcryptjs';
 
 
 export default async function handler(req, res) {
-  
+  console.log(req.method)
+  if(req.method === 'POST'){
     const data = req.body;
     
     const client = await MongoClient.connect(process.env.MONGO_CONNECTION_URL);
     const db = client.db('data-visualization-dashboard');
-    console.log(db)
 
     const users = db.collection('users');
 
@@ -25,8 +25,10 @@ export default async function handler(req, res) {
         res.status(200).json({message: 'Login successful', userId: user._id});
     }catch(err){
         console.error(err);
+    }finally{
+      client.close();
     }
    
-    client.close();
- 
+  
+  }
 }
