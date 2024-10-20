@@ -1,6 +1,7 @@
 import Head from "next/head";
 import localFont from "next/font/local";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
         <main className={styles.heroContent}>
         <p className={styles.WebsiteName}>📊 DataLens</p>
         <p className={styles.appDesc}>Explore, analyze, and understand your data like never before.</p>
-          <a href="/auth">Sign Up</a>
+          <Link href="/auth">Sign Up</Link>
         </main>
       </div>
     </>

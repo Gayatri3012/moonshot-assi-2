@@ -92,6 +92,7 @@ export default function DashBoard() {
         {!isAuthenticated && <div className={styles.loginMessage}>
 
           <h3>You need to be logged in to view this dashboard.</h3>
+          
           <Link href='/auth/login'>Login</Link>
         </div>}
         {isAuthenticated && <div className={styles.pageContent}>
