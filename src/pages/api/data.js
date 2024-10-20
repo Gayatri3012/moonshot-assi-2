@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     if(req.method === 'GET'){
     try{
             const data = [];
-            await fs.createReadStream('src/util/data.csv')
+            await fs.createReadStream('public/data.csv')
             .pipe(csvParser())
             .on('data', (row) => data.push(row))
             .on('end', () => {
