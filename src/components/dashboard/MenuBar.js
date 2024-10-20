@@ -181,7 +181,7 @@ export default function MenuBar({
                 onChange={handleAgeChange} /> 15-25</span>
                 <span><input type='radio' name='Age' alt='>25' value=">25" 
                 checked={selectedAge === '>25'}
-                onChange={handleAgeChange} /> {'>25'}</span>
+                onChange={handleAgeChange} /> &gt;25</span>
                 </div>}
             </li>
             <li> 
